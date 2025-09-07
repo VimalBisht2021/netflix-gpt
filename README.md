@@ -1,14 +1,13 @@
 # Netflix-GPT
 
-A React-based demo that combines a Netflix-style UI with GPT-powered search and movie suggestions, plus Firebase for user authentication and persistence. This project demonstrates how to integrate OpenAI and Firebase into a movie-browsing app with features like GPT-driven recommendations, search, trailers, and curated lists (popular, trending, upcoming).
----
 A React-based application that combines a Netflix-style UI with GPT-powered search and movie suggestions, using Firebase for user authentication. This project demonstrates how to integrate OpenAI and Firebase into a modern movie-browsing app with features like GPT-driven recommendations, search, trailers, and curated movie lists.
+
+---
 
 ## Table of contents
 
 - [Introduction](#introduction)
 - [Key features](#key-features)
-- [Live demo / build](#live-demo--build)
 - [Live demo](#live-demo)
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -25,7 +24,6 @@ A React-based application that combines a Netflix-style UI with GPT-powered sear
 
 ## Introduction
 
-Netflix-GPT is a single-page React application that mimics a streaming UI and augments the experience with GPT-powered features. It demonstrates how to combine modern frontend tooling (React, Tailwind CSS) with backend services (Firebase) and LLM integration (OpenAI) to provide contextual movie suggestions, search enhancements, and interactive UX.
 Netflix-GPT is a single-page React application that mimics a streaming service's UI and enhances it with AI-powered features. It demonstrates how to combine modern frontend tooling (React, Redux, Tailwind CSS) with backend services (Firebase) and LLM integration (OpenAI) to provide contextual movie suggestions, an enhanced search experience, and an interactive UI.
 
 This README will guide you through setting up the project locally, configuring API keys, running the app in development, and understanding the codebase.
@@ -40,10 +38,8 @@ This README will guide you through setting up the project locally, configuring A
 - Build-ready with `react-scripts` for production deployment
 - State management with Redux Toolkit
 
-## Live demo / build
 ## Live demo
 
-This repo includes a `build/` output folder. If you'd like to deploy the app (for example to Firebase Hosting), build the project and follow your hosting provider's deployment instructions.
 A live demo can be deployed to services like Vercel, Netlify, or Firebase Hosting. To deploy, first build the project:
 
 ```sh
@@ -62,218 +58,28 @@ Then, follow your hosting provider's instructions to deploy the `build/` directo
 
 ## Installation
 
-
 1. Clone the repository
 
 ```powershell
 git clone https://github.com/VimalBisht2021/netflix-gpt.git
-git clone https://github.com/your-username/netflix-gpt.git
 cd netflix-gpt
 ```
 
-1. Install dependencies
+2. Install dependencies
 
 ```powershell
 npm install
 ```
 
-1. Create a configuration file (see next section)
+3. Create a configuration file (see next section)
 
-1. Start the development server
+4. Start the development server
 
 ```powershell
 npm start
 ```
 
 The app will open at http://localhost:3000 by default.
-
-## Configuration
-
-Create a `.env` file in the project root (this file should not be committed). At minimum configure the following environment variables:
-
-```env
-# .env (example)
-REACT_APP_OPENAI_API_KEY=sk-xxxxx
-REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-REACT_APP_FIREBASE_PROJECT_ID=your-project-id
-REACT_APP_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=xxxxxxx
-REACT_APP_FIREBASE_APP_ID=1:xxxxxxxx:web:xxxxxxxx
-```
-
-Notes:
-
-- The app reads OpenAI and Firebase config values from `process.env.REACT_APP_*` variables. The exact environment variable names may be used inside `src/utils/firebase.js` and `src/utils/openai.js`.
-# Netflix-GPT
-
-A React-based demo that combines a Netflix-style UI with GPT-powered search and movie suggestions, plus Firebase for user authentication and persistence. This project showcases how to integrate OpenAI and Firebase into a movie-browsing app with features like GPT-driven recommendations, search, trailers, and curated lists (popular, trending, upcoming).
-
----
-
-## Table of contents
-
-- [Introduction](#introduction)
-- [Key features](#key-features)
-- [Live demo / build](#live-demo--build)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Project structure](#project-structure)
-- [Dependencies](#dependencies)
-- [Development notes](#development-notes)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-
----
-
-## Introduction
-
-Netflix-GPT is a single-page React application that mimics a streaming UI and augments the experience with GPT-powered features. It demonstrates how to combine modern frontend tooling (React, Tailwind CSS) with backend services (Firebase) and LLM integration (OpenAI) to provide contextual movie suggestions, search enhancements, and interactive UX.
-
-This README will guide you through setting up the project locally, configuring API keys, running the app in development, and understanding the codebase.
-
-## Key features
-
-- Netflix-like responsive UI and movie browsing
-- GPT-powered search and movie suggestions
-- Firebase authentication and (optional) persistence
-- Dedicated hooks for fetching popular/trending/upcoming movies and trailers
-- Tailwind CSS for styling and layout
-- Build-ready with `react-scripts` for production deployment
-
-## Live demo / build
-
-This repo includes a `build/` output folder. If you'd like to deploy the app (for example to Firebase Hosting), build the project and follow your hosting provider's deployment instructions.
-
-## Requirements
-
-- Node.js v16+ (Node 18+ recommended)
-- npm (or yarn/pnpm) installed
-- An OpenAI API key for GPT features
-- A Firebase project (optional but required for auth/persistence)
-
-## Installation
-
-1. Clone the repository
-
-```powershell
-git clone https://github.com/VimalBisht2021/netflix-gpt.git
-cd netflix-gpt
-```
-
-2. Install dependencies
-
-```powershell
-npm install
-```
-
-3. Create a configuration file (see next section)
-
-4. Start the development server
-
-```powershell
-npm start
-```
-
-The app will open at <http://localhost:3000> by default.
-
-## Configuration
-
-Create a `.env` file in the project root (this file should not be committed). At minimum configure the following environment variables:
-
-```env
-# .env (example)
-REACT_APP_OPENAI_API_KEY=sk-xxxxx
-REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-REACT_APP_FIREBASE_PROJECT_ID=your-project-id
-REACT_APP_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=xxxxxxx
-REACT_APP_FIREBASE_APP_ID=1:xxxxxxxx:web:xxxxxxxx
-```
-
-Notes:
-
-- The app reads OpenAI and Firebase config values from `process.env.REACT_APP_*` variables. The exact environment variable names may be used inside `src/utils/firebase.js` and `src/utils/openai.js`.
-# Netflix-GPT
-
-A React-based demo that combines a Netflix-style UI with GPT-powered search and movie suggestions, plus Firebase for user authentication and persistence. This project showcases how to integrate OpenAI and Firebase into a movie-browsing app with features like GPT-driven recommendations, search, trailers, and curated lists (popular, trending, upcoming).
-
----
-
-## Table of contents
-
-- [Introduction](#introduction)
-- [Key features](#key-features)
-- [Live demo / build](#live-demo--build)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Project structure](#project-structure)
-- [Dependencies](#dependencies)
-- [Development notes](#development-notes)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-
----
-
-## Introduction
-
-Netflix-GPT is a single-page React application that mimics a streaming UI and augments the experience with GPT-powered features. It demonstrates how to combine modern frontend tooling (React, Tailwind CSS) with backend services (Firebase) and LLM integration (OpenAI) to provide contextual movie suggestions, search enhancements, and interactive UX.
-
-This README will guide you through setting up the project locally, configuring API keys, running the app in development, and understanding the codebase.
-
-## Key features
-
-- Netflix-like responsive UI and movie browsing
-- GPT-powered search and movie suggestions
-- Firebase authentication and (optional) persistence
-- Dedicated hooks for fetching popular/trending/upcoming movies and trailers
-- Tailwind CSS for styling and layout
-- Build-ready with `react-scripts` for production deployment
-
-## Live demo / build
-
-This repo includes a `build/` output folder. If you'd like to deploy the app (for example to Firebase Hosting), build the project and follow your hosting provider's deployment instructions.
-
-## Requirements
-
-- Node.js v16+ (Node 18+ recommended)
-- npm (or yarn/pnpm) installed
-- An OpenAI API key for GPT features
-- A Firebase project (optional but required for auth/persistence)
-
-## Installation
-
-1. Clone the repository
-
-```powershell
-git clone https://github.com/VimalBisht2021/netflix-gpt.git
-cd netflix-gpt
-```
-
-2. Install dependencies
-
-```powershell
-npm install
-```
-
-3. Create a configuration file (see next section)
-
-4. Start the development server
-
-```powershell
-npm start
-```
-
-The app will open at <http://localhost:3000> by default.
-
-## Configuration
 
 ## Configuration
 
@@ -345,7 +151,6 @@ Exact versions are declared in `package.json`.
 
 ## Development notes
 
-
 - Styling uses Tailwind; check `tailwind.config.js` for customization.
 - Redux slices are in `src/utils/` and wired in `appstore.js`.
 - LLM calls are isolated in `src/utils/openai.js`. To switch models or modify prompts, update that file or the slice that dispatches GPT actions.
@@ -409,25 +214,4 @@ If you want, I can add a `LICENSE` file with the MIT text.
 - OpenAI for GPT capabilities
 - Firebase for authentication/hosting
 - Tailwind CSS for UI
-
----
-
-
-If you'd like, I can also:
-
-- Add a `.env.example` file to the repo with the variable names shown above.
-- Create a `LICENSE` file (MIT) and add a license badge to `README.md`.
-- Add a short contributing template or GitHub issue/PR templates.
-
-Requirements coverage:
-
-- Introduction: Done
-- Key features: Done
-- Installation steps: Done
-- Usage instructions: Done
-- Project structure: Done
-- Dependencies: Done
-- Configuration details: Done
-- Contribution guidelines: Done
-- License information: Done (notes + suggestion)
 
